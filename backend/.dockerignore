@@ -1,0 +1,7 @@
+cat > backend/.dockerignore <<'EOF'
+node_modules
+npm-debug.log
+.env
+.vscode
+.DS_Store
+EOF
