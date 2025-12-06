@@ -1,0 +1,59 @@
+.student-kicked-out {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, #fff5f5 0%, #ffe5e5 100%);
+}
+
+.kicked-container {
+  text-align: center;
+  max-width: 500px;
+  animation: slideUp 0.5s ease;
+}
+
+.kicked-content {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.kicked-icon {
+  margin-bottom: 1rem;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.kicked-content h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--danger);
+}
+
+.kicked-content p {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  max-width: 400px;
+}
+
+.kicked-content .btn-primary {
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .kicked-content {
+    padding: 2rem;
+  }
+
+  .kicked-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .kicked-icon svg {
+    width: 60px;
+    height: 60px;
+  }
+}

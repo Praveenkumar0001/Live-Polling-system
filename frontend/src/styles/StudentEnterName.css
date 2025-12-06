@@ -1,0 +1,145 @@
+/* Main Container */
+.student-enter-name {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
+}
+
+.enter-name-container {
+  width: 100%;
+  max-width: 38rem;
+}
+
+.enter-name-card {
+  background: rgb(255, 255, 255);
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+}
+
+/* Brand Badge */
+.brand-badge-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.brand-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #6366f1;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* Title */
+.enter-name-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  text-align: center;
+  color: #111827;
+  margin-bottom: 0.75rem;
+}
+
+.title-bold {
+  font-weight: 800;
+}
+
+/* Subtitle */
+.enter-name-subtitle {
+  text-align: center;
+  color: #6b7280;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.subtitle-bold {
+  font-weight: 600;
+  color: #111827;
+}
+
+/* Form */
+.enter-name-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: #f3f4f6;
+  border: 2px solid transparent;
+  border-radius: 0.5rem;
+  color: #111827;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.form-input::placeholder {
+  color: #9ca3af;
+}
+
+.form-input:focus {
+  border-color: #6366f1;
+  background: white;
+}
+
+/* Submit Button */
+.submit-button {
+  width: 200px;
+  padding: 0.875rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  background: #7C3AED;
+  color: white;
+  border: none;
+  border-radius: 26px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin: 0 auto;
+  display: block;
+}
+
+.submit-button:hover {
+  background: #4f46e5;
+  box-shadow: 0 6px 10px rgba(99, 102, 241, 0.3);
+}
+
+.submit-button:active {
+  transform: scale(0.98);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .enter-name-card {
+    padding: 1.5rem;
+  }
+
+  .enter-name-title {
+    font-size: 1.5rem;
+  }
+}

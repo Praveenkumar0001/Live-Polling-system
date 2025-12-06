@@ -1,0 +1,258 @@
+/* Main Container */
+.teacher-results {
+  min-height: 100vh;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
+}
+
+/* View Poll History Button - Top Right */
+.btn-view-history-top {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #6366f1;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  border: none;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 6px rgba(99, 102, 241, 0.2);
+}
+
+.btn-view-history-top:hover {
+  background: #4f46e5;
+  box-shadow: 0 6px 10px rgba(99, 102, 241, 0.3);
+}
+
+/* Main Content */
+.results-main-content {
+  max-width: 600px;
+  width: 100%;
+  animation: slideUp 0.5s ease;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Results Header */
+.results-header {
+  margin-bottom: 1.5rem;
+}
+
+.results-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+}
+
+/* Results Card */
+.results-card {
+  background: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Question Text Bar */
+.question-text-bar {
+  background: #4b5563;
+  color: white;
+  padding: 1rem 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+/* Results List */
+.results-list {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* Result Item */
+.result-item {
+  position: relative;
+  background: #f3f4f6;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  height: 48px;
+  display: flex;
+  align-items: center;
+}
+
+/* Progress Bar Fill */
+.result-bar-fill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background: #6366f1;
+  transition: width 0.5s ease;
+  border-radius: 0.5rem;
+}
+
+/* Result Content Overlay */
+.result-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.result-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* Option Number Circle */
+.option-number {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #6366f1;
+  flex-shrink: 0;
+}
+
+/* Option Text */
+.option-text {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: inherit;
+}
+
+/* Make text white when on filled portion */
+.result-item:has(.result-bar-fill[style*="width: 0%"]) .option-text,
+.result-item:has(.result-bar-fill[style*="width: 0%"]) .result-percentage {
+  color: #111827;
+}
+
+/* Result Percentage */
+.result-percentage {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: inherit;
+}
+
+/* Results Actions */
+.results-actions {
+  padding: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* Ask New Question Button */
+.btn-ask-new {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #6366f1;
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  border: none;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 6px rgba(99, 102, 241, 0.2);
+}
+
+.btn-ask-new:hover:not(:disabled) {
+  background: #4f46e5;
+  box-shadow: 0 6px 10px rgba(99, 102, 241, 0.3);
+}
+
+.btn-ask-new:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Loading Screen */
+.loading-screen {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  color: #6b7280;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .teacher-results {
+    padding: 1.5rem;
+  }
+
+  .btn-view-history-top {
+    top: 1rem;
+    right: 1rem;
+    padding: 0.625rem 1.25rem;
+    font-size: 0.8rem;
+  }
+
+  .results-main-content {
+    max-width: 100%;
+  }
+
+  .results-title {
+    font-size: 1.125rem;
+  }
+
+  .question-text-bar {
+    padding: 0.875rem 1rem;
+    font-size: 0.875rem;
+  }
+
+  .results-list {
+    padding: 1rem;
+  }
+
+  .result-item {
+    height: 44px;
+  }
+
+  .option-text,
+  .result-percentage {
+    font-size: 0.85rem;
+  }
+
+  .results-actions {
+    padding: 1rem;
+  }
+
+  .btn-ask-new {
+    padding: 0.625rem 1.5rem;
+    font-size: 0.8rem;
+  }
+}
